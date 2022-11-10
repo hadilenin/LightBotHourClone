@@ -11,6 +11,8 @@ public class Main {
         i[0][0] = 1;
         i[0][1] = 2;
 
-        System.out.println(i[1][0]);
+        int[] h = new int[2];
+        h[2] = 0;
+
     }
 }
