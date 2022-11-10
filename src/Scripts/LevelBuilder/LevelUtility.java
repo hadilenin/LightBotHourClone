@@ -1,4 +1,4 @@
-package Scripts.Level;
+package Scripts.LevelBuilder;
 
 import UtilityLib.*;
 

@@ -1,7 +1,7 @@
 package Scripts.Mechanics;
 
 import Scripts.Bot.Bot;
-import Scripts.Level.LevelUtility;
+import Scripts.LevelBuilder.LevelUtility;
 import UtilityLib.Position2D;
 import UtilityLib.Position3D;
 
