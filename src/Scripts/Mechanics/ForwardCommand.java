@@ -1,16 +1,12 @@
 package Scripts.Mechanics;
 
 import Scripts.Bot.Bot;
-import Scripts.LevelBuilder.LevelUtility;
-import UtilityLib.Position2D;
 import UtilityLib.Position3D;
 
-public class ForwardCommand implements Command {
-
+public class ForwardCommand{
+/*
     Position3D intendedPos;
     Position3D currentPos;
-
-    LevelUtility levelUtility;
 
     @Override
     public void execute(Bot bot) {
@@ -36,11 +32,5 @@ public class ForwardCommand implements Command {
                 break;
         }
     }
-
-    private boolean collided() {
-        Position2D temp_1 = new Position2D(intendedPos.x, intendedPos.y);
-        Position2D temp_2 = new Position2D(currentPos.x, currentPos.y);
-        return levelUtility.isEmpty(temp_1) || !(levelUtility.areOnSameLevel(temp_1,temp_2));
-    }
-
+*/
 }

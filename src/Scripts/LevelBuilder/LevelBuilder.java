@@ -4,7 +4,8 @@ package Scripts.LevelBuilder;
 import Scripts.LevelMatrix.LevelMatrix;
 
 public class LevelBuilder {
-    private LevelMatrix levelMatrix;
+    private final LevelMatrix levelMatrix;
+
 
     public LevelBuilder(int xAxisSize, int yAxisSize) {
         levelMatrix = new LevelMatrix(xAxisSize, yAxisSize);
@@ -43,12 +44,16 @@ public class LevelBuilder {
     }
 
 
-        public void removeBlueTileFrom(int x, int y) {
-            if (levelMatrix.get(x, y) < 0)
-                levelMatrix.switchSignAt(x, y);
-            else
-                blueTileNotFound();
-        }
+    public void removeBlueTileFrom(int x, int y) {
+        if (levelMatrix.get(x, y) < 0)
+            levelMatrix.switchSignAt(x, y);
+        else
+            blueTileNotFound();
+    }
+
+    public LevelMatrix getLevelMatrix() {
+        return levelMatrix;
+    }
 
 
     private void blueTileNotFound() {

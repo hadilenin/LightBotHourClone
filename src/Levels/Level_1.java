@@ -1,18 +1,33 @@
 package Levels;
 
+import Scripts.Bot.Bot;
 import Scripts.LevelBuilder.*;
+import Scripts.LevelMatrix.LevelMatrix;
 import UtilityLib.*;
 
 
-public class Level_1 extends LevelBuilder {
+public class Level_1 extends LevelStructure{
 
-    public Level_1() {
-        super(1,3);
-        super.addBlockAt(0,0);
-        super.addBlockAt(0,1);
-        super.addBlockAt(0,2);
-        super.setUpBlueTileAt(0,2);
+    private static Level_1 self;
 
+    private Level_1(int x, int y) {
+        levelBuilder = new LevelBuilder(x,y);
+        init();
     }
 
+    @Override
+    public void initBot() {
+        bot = new Bot();
+        bot.setMatrix(levelBuilder.getLevelMatrix());
+    }
+
+    @Override
+    public void spawnBot() {
+        
+    }
+
+    @Override
+    public void createMap() {
+
+    }
 }
