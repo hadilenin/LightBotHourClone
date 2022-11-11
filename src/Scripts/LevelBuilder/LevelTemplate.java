@@ -2,7 +2,7 @@ package Scripts.LevelBuilder;
 
 import Scripts.Bot.Bot;
 
-public abstract class LevelStructure {
+public abstract class LevelTemplate {
     public LevelBuilder levelBuilder;
     public Bot bot;
 

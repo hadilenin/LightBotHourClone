@@ -40,6 +40,10 @@ public class LevelMatrix {
         return columns;
     }
 
+    public boolean isNegative(int x,int y){
+        return get(x, y) < 0;
+    }
+
     public boolean isInBound(int x, int y) {
         return (x < rows && x >= 0 && y < columns && y >= 0);
     }

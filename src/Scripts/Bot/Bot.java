@@ -1,40 +1,48 @@
 package Scripts.Bot;
 
-import Scripts.LevelMatrix.LevelMatrix;
-import Scripts.Mechanics.Command;
+import Scripts.Bot.SpriteNavigation.Navigator;
+import Scripts.Mechanics.CommandStructure.Command;
 import UtilityLib.*;
 
 
 public class Bot {
 
-    private Position3D position;
-    private Direction2D direction;
-    private LevelMatrix matrix;
+    private Navigator navigatorHandler;
 
 
-    public void setMatrix(LevelMatrix levelMatrix){
-        this.matrix = levelMatrix;
-    }
-    public void setPos(int x,int y,int z){
-        position.x = x;
-        position.y = y;
-        position.z = z;
+    public void setNavigation(Navigator navigatorHandler) {
+        this.navigatorHandler = navigatorHandler;
     }
 
     public Position3D getPos(){
-        return position;
+        return this.navigatorHandler.getSprite().getPosition();
     }
 
-    public void setDir(Direction2D dir){
-        direction = dir;
+    public void setPos(Position3D pos){
+        this.navigatorHandler.getSprite().setPosition(pos);
     }
 
     public Direction2D getDir(){
-        return direction;
+        return this.navigatorHandler.getSprite().getDirection();
     }
 
+    public void setDir(Direction2D dir){
+        this.navigatorHandler.getSprite().setDirection(dir);
+    }
+
+    public boolean isVisible(){
+        return this.navigatorHandler.getSprite().getVisibility();
+    }
+
+    public void setVisibility(boolean visibility){
+        this.navigatorHandler.getSprite().setVisibility(visibility);
+    }
+    public Navigator getNavigationHandler() {
+        return navigatorHandler;
+    }
 
     public void nextCommand(Command command) {
-        command.execute(this);
+
     }
+
 }
