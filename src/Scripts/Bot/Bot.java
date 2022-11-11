@@ -42,7 +42,7 @@ public class Bot {
     }
 
     public void nextCommand(Command command) {
-
+        command.execute(this);
     }
 
 }
