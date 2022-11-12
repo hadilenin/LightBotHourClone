@@ -1,16 +1,16 @@
-package Textures;
+package Textures.Image;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ImageLoader {
+public class Image {
 
     private BufferedImage image;
     private String imagePath;
 
-    public ImageLoader(String path) {
+    public Image(String path) {
         this.imagePath = path;
     }
 
