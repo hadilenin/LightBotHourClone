@@ -3,6 +3,19 @@ package Scripts.LevelMatrix;
 import UtilityLib.Position2D;
 
 public class LevelMatrix {
+    /*
+    * 2 dimensional Level Matrix represent every entity on map by signed integer number (except Robot presence which was included
+    *  in Sprite class).
+    *
+    *  0  --> represents empty space where no block was allocated to; matrix[y][x] = 0 means at (x,y) no block was
+    * allocated
+    *
+    * any positive integer --> indicates numbers of blocks topped on each other
+    *
+    * any negative integer --> the absolute value of them as same implication as positive integer which was explained
+    * above and the negative sign is indicating existing of blue tile on top
+    * 
+     */
     private int[][] matrix;
     private int rows;
     private int columns;
