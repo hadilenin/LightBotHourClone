@@ -7,9 +7,9 @@ public abstract class LevelTemplate {
     public Bot bot;
 
     public final void init(){
+        createMap();
         initBot();
         spawnBot();
-        createMap();
     }
     public abstract void initBot();
     public abstract void spawnBot();
