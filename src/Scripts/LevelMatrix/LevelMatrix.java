@@ -14,7 +14,7 @@ public class LevelMatrix {
     *
     * any negative integer --> the absolute value of them as same implication as positive integer which was explained
     * above and the negative sign is indicating existing of blue tile on top
-    * 
+    *
      */
     private int[][] matrix;
     private int rows;
